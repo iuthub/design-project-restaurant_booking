@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <meta name="description" content="">
+   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="custom-main-banner">
+           <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
+             <div class="container"> 
+             <div class="row nvr">    
+             <div class="col-xl-6">  
+             <a class="navbar-brand float-left" href="#"><img src="images/logo3.png" alt="..."></a>
+              <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                      aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+                      <i class="fa fa-bars" aria-hidden="true"></i>
+                  </span>
+              </button>
+            </div>
+              <div class="col-xl-6">  
+              <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active red-item">
+                    <a class="nav-link redtxt" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item red-item ">
+                    <a class="nav-link redtxt" href="#about-section">Services</a>
+                  </li>
+                  <li class="nav-item red-item">
+                    <a class="nav-link  redtxt" href="#company-section">Menu</a>
+                  </li>
+                  <li class="nav-item red-item">
+                    <a class="nav-link  redtxt" href="#company-section">Contact Us</a>
+                  </li>
+                   <li class="nav-item red-item">
+                    <a class="nav-link  redtxt" href="#company-section">
+                     <i class="fa fa-phone"></i></a>
+                  </li>
+                   <li class="nav-item red-item">
+                    <a class="nav-link  redtxt" href="#company-section">
+                     
+                    </a>
+                  </li>
+                 </ul>
+               <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                  Login
+              </button>
+                </div>
+              </div>
+            </div>
+             </div>
+          </nav>
+    
+    </div>
+          <div class="row navrow">
+            <div class="white-bg">
+              
+            </div>
+             <div class="red-bg">
+            </div>
+           <div class="container">
+               <div class="whiteFrame">
+                
+              </div>
+           </div>
+  <!-- /.navbar -->
+          <!-- Modal HTML -->
+            <div id="myModal" class="modal fade">
+              <div class="modal-dialog modal-login">
+                <div class="modal-content">
+                  <div class="modal-header">        
+                    <h4 class="modal-title">Sign In</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <form action="/examples/actions/confirmation.php" method="post">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                          <input type="text" class="form-control" name="username" placeholder="Username" required="required">
+                        </div>
+                      </div>
+                       <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                          <input type="text" class="form-control" name="phone" placeholder="Phone number" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                          <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                      </div>
+                      <p class="hint-text"><a href="#">Forgot Password?</a></p>
+                    </form>
+                  </div>
+                  <div class="modal-footer">Don't have an account? <a href="#">Create one</a></div>
+                </div>
+              </div>
+            </div>     
+           <!-- Modal HTML -->
+
+
+          <div class="main" id="main">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+              <li data-target="#demo" data-slide-to="3"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="container">
+                 <div class="row">
+                    <div class="col-lg-3">
+                       <div class="header">
+                        <h1>Uzbek delicasies</h1>
+                        <h4>For any taste</h4>
+                      </div>
+                    </div>
+                   <div class="col-lg-8">
+                      <img class="img float-left" src="images/img2.png">
+                   </div>
+                 </div>
+              </div>
+            </div>
+              <div class="carousel-item">
+                <div class="container">
+                 <div class="row">
+                    <div class="col-lg-3">
+                       <div class="header">
+                        <h1>Uzbek delicasies</h1>
+                        <h4>For any taste</h4>
+                      </div>
+                    </div>
+                   <div class="col-lg-8">
+                      <img class="img float-left" src="images/img3.png">
+                   </div>
+                 </div>
+              </div>
+            </div>
+          
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+             
+            </div>
+             
+             
+           </div>    
+
+    </div>
+<!--services-->
+<div class="services">
+    <div class="container">
+        <div class="row justify-content-center pt-5 pb-3">
+            <div class="col-lg-12 sec-header">
+                <h1>USG Restaurant</h1>
+            </div>
+            <div class="col-lg-12 sec-sub-header">
+                <p>Where taste meets the myth!</p>
+            </div>
+        </div>
+    </div>
+    <div class="icon_wrapper">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="row" id="iconRow1">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="icon_container">
+                            <div class="icon">
+                                <img src="images/design/uslygi_ic_12.png" alt="..."  class="wobble-vertical">
+                            </div>
+                            <div class="icon_bg">
+                                <img src="images/design/uslygi_ic_bg2.png" alt="...">
+                            </div>
+                            <div class="icon_exo">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                            <div class="icon_exo_2">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                        </div>
+                        <p class="line_2"><img src="images/design/line_22.png" alt="..."></p>
+                        <div class="number_zag">01</div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                        <div class="uslygi_zag_1"><a href="orderFood.html">Order Food</a></div>
+                        <p id="uslygi_zag_1">You can find food for any taste!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <div class="row" id="iconRow2">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="icon_container">
+                            <div class="icon">
+                                <img src="images/design/uslygi_ic_22.png" alt="..."  class="wobble-vertical">
+                            </div>
+                            <div class="icon_bg">
+                                <img src="images/design/uslygi_ic_bg2.png" alt="...">
+                            </div>
+                            <div class="icon_exo">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                            <div class="icon_exo_2">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                        </div>
+                        <p class="line_2"><img src="images/design/line_22.png" alt="..."></p>
+                        <div class="number_zag">02</div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                        <div class="uslygi_zag_1"><a href="/rastsenki.html">Book table</a></div>
+                        <p id="uslygi_zag_13">Spacious places are waiting for you!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-6 offset-md-3 col-sm-12 col-12 justify-content-center">
+                <div class="row" id="iconRow">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+                        <div class="icon_container">
+                            <div class="icon">
+                                <img src="images/design/uslygi_ic_32.png" alt="..."  class="wobble-vertical">
+                            </div>
+                            <div class="icon_bg">
+                                <img src="images/design/uslygi_ic_bg2.png" alt="...">
+                            </div>
+                            <div class="icon_exo">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                            <div class="icon_exo_2">
+                                <img src="images/design/uslygi_ic_bg_22.png" alt="...">
+                            </div>
+                        </div>
+                        <p class="line_2"><img src="images/design/line_22.png" alt="..."></p>
+                        <div class="number_zag">03</div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
+                        <div class="uslygi_zag_1"><a href="/rastsenki.html">Take-away</a></div>
+                        <p id="uslygi_zag_1">Pretty fast service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--services-->
+    <div class="menu">
+      <div class="container pb-5">
+        <div class="row justify-content-center pt-5 pb-3">
+          <div class="col-lg-12 sec-header">
+             <h1>USG Restaurant</h1>
+          </div>
+           <div class="col-lg-12 sec-sub-header">
+             <p>Where taste meets the myth!</p>
+           </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-lg-4">
+             <div class="card">
+              <img src="images/img4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 txt-center">
+                    <h5 class="card-title">Lagman soup</h5>
+                  </div>
+                   <div class="col-lg-6">
+                     <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+             <div class="card">
+              <img src="images/img3.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 txt-center">
+                    <h5 class="card-title">Lagman soup</h5>
+                  </div>
+                   <div class="col-lg-6">
+                     <a href="#" class="btn btn-success">View details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+             <div class="card">
+              <img src="images/img4.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6 txt-center">
+                    <h5 class="card-title">Lagman soup</h5>
+                  </div>
+                   <div class="col-lg-6">
+                     <a href="#" class="btn btn-success">View details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+      </div>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailsTitle">Lagman</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <img src="images/img4.png" class="modal_img" alt="...">
+                        </div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto consequuntur dicta distinctio dolorem eius facere ipsa ipsam maxime nam natus non quas quia quidem reiciendis velit veniam vitae. </p>
+                    </div>
+                </div>
+                  <form action="">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group row">
+                                <label for="number" class="col-sm-6 col-form-label">How many people?</label>
+                                <div class="col-sm-6">
+                                    <input type="number" class="form-control" id="number" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-6">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">Book a table</label>
+                            </div>
+                                </div>
+                                <div class="col-lg-6">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">Delivery service</label>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 pt-3">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="date">Date</label>
+                                        <input type="date" class="form-control" id="date" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="time">Time</label>
+                                        <input type="time" class="form-control" id="time" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                 </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="orderFood.html" target="_blank" class="btn btn-success">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-lg-4">
+                <a class="navbar-brand float-left" href="#"><img src="images/logo3.png" alt="..."></a>
+            </div>
+            <div class="col-lg-4">
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#">Menu</a>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                <h3>Address:</h3>
+                <p>9, Ziyolilar str., M.Ulugbek district, Tashkent city</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrap">
+
+    </div>
+
+</div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/bootstrap/js/bootstrap.js"></script>
+     <script src="js/custom.js"></script>
+    </body>
+
+</html>
