@@ -386,7 +386,7 @@ body{
 
 
 .icon_wrapper{
-    padding: 3% 6% 8% 6%;
+    padding: 3% 6% 2% 6%;
 }
 .icon_container img{
     max-width: 100%;
@@ -496,8 +496,8 @@ body{
 .number_zag {
     padding: 0%;
     text-transform: uppercase;
-    color: #01b4ff;
-    font: 36px HelveticaNeueCyr-Medium;
+    color: #bd2130;
+    font: 36px Open Sans;
     font-weight: bold;
     text-align: center;
     letter-spacing: 3px;
@@ -506,21 +506,22 @@ p.line_2 {
     text-align: center;
     margin-top: 2px;
 }
-div.uslygi_zag_1, div.uslygi_zag_1 a {
+div.services_slogan, div.services_slogan a {
     padding: 10px 0 0;
     text-transform: uppercase;
     color: #161616;
-    font: 30px HelveticaNeueCyr-Medium;
+    font-size: 30px;
+    font-family: 'Open Sans';
     font-weight: bold;
     text-align: left;
     letter-spacing: 3px;
     text-decoration: none;
 }
 
-#uslygi_zag_1{
+#services_slogan{
     text-align: left;
     color: #161616;
-    font: 16px HelveticaNeueCyr-Roman;
+    font: 16px Open Sans;
     line-height: 1.4;
 }
 
@@ -551,4 +552,13 @@ div.uslygi_zag_1, div.uslygi_zag_1 a {
 .footer nav a{
     color: white;
 }
-
+.res_info{
+ margin-bottom: 3%;
+}
+.res_img{
+    width: 100%;
+}
+.divider{
+    width: 50%;
+    border-top: 4px dotted rgba(189, 33, 48, 0.35);
+}
