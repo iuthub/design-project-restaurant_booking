@@ -546,6 +546,7 @@ div.services_slogan, div.services_slogan a {
     width: 100%;
     height: auto;
     padding-top: 3%;
+    padding-bottom: 3%;
     background-color: #bd2130;
     box-shadow: inset 0px 10px 16px rgba(6, 6, 6, 0.4);
 }
