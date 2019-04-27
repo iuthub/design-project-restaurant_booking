@@ -3,7 +3,7 @@ $(window).scroll(function() {
          $('#r1').removeClass('reveal');
          $('#main').removeClass('reveal');
        }
-    if ($(this).scrollTop()>0 && $(this).scrollTop()<470)
+    if ($(this).scrollTop()>0 && $(this).scrollTop()<400)
      {
         $("#r1").addClass('reveal');
        }

@@ -15,10 +15,10 @@
                 <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active red-item">
-                            <a class="nav-link redtxt" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link redtxt" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item red-item ">
-                            <a class="nav-link redtxt" href="#about-section">Services</a>
+                            <a class="nav-link redtxt" href="/services">Services</a>
                         </li>
                         <li class="nav-item red-item">
                             <a class="nav-link  redtxt" href="#company-section">Menu</a>

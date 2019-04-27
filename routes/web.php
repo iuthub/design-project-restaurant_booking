@@ -15,6 +15,11 @@ Route::get('/', [
     'as'   => 'order.index',
     'uses' => 'DashboardController@index',
 ]);
+Route::get('/services', [
+    'as'   => 'services.services',
+    'uses' => 'DashboardController@index',
+]);
+
 
 // Orders
 Route::group([
