@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
 </head>
 <body>
-@include('partials.header')
+
     @yield('content')
 
 <script src="{{asset('assets/js/jquery.min.js')}}"></script>

@@ -1,4 +1,5 @@
 <!--services-->
+@extends('layouts.master')
 <div class="services">
     <div class="container">
         <div class="row justify-content-center pt-5 pb-3">

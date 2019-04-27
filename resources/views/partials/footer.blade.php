@@ -12,6 +12,8 @@
                 </nav>
             </div>
             <div class="col-lg-3">
+                <h3>Phone numbers:</h3>
+                <p>+97 777 77 77 <br>+95 555 55 55</p>
                 <h3>Address:</h3>
                 <p>9, Ziyolilar str., M.Ulugbek district, Tashkent city</p>
             </div>

@@ -15,4 +15,12 @@ class DashboardController extends Controller
     {
         return view('welcome');
     }
+    public function services()
+    {
+        return view('services/services');
+    }
+    public function admin()
+    {
+        return view('admin/index');
+    }
 }

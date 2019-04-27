@@ -17,7 +17,11 @@ Route::get('/', [
 ]);
 Route::get('/services', [
     'as'   => 'services.services',
-    'uses' => 'DashboardController@index',
+    'uses' => 'DashboardController@services',
+]);
+Route::get('/admin', [
+    'as'   => 'admin.index',
+    'uses' => 'DashboardController@admin',
 ]);
 
 
