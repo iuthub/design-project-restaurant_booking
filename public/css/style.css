@@ -557,8 +557,27 @@ div.services_slogan, div.services_slogan a {
 }
 .res_img{
     width: 100%;
+    box-shadow: -9px 9px 9px 0 rgba(6, 6, 6, 0.4);
 }
 .divider{
     width: 50%;
     border-top: 4px dotted rgba(189, 33, 48, 0.35);
+}
+.timetable{
+    display: flex;
+    margin-bottom: 6%;
+}
+.title{
+    font-size: 18px;
+    font-weight: 600;
+    width: 35%;
+    vertical-align: center;
+}
+
+.info{
+    font-size: 16px;
+    font-weight: 600;
+    width: 65%;
+    border-bottom: 1px dotted rgba(189, 33, 48, 0.35);
+    text-align: center;
 }

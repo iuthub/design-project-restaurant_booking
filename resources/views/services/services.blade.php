@@ -104,43 +104,23 @@
         </div>
     <div class="row pb-5">
         <div class="col-lg-6">
-            <img src="images/restaurant.jpg" alt="..." class="res_img">
+            <img src="images/restaurant.jpg" alt="..." class="res_img mt-3">
         </div>
         <div class="col-lg-6">
-            <table class="table table-striped myTable">
-                <thead>
-                <tr>
-                    <th>№</th>
-                    <th>Food name</th>
-                    <th>Number</th>
-                    <th>Time</th>
-                    <th>Price</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Lagman</td>
-                    <td>2</td>
-                    <td>21.04.12</td>
-                    <td>$15</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lagman</td>
-                    <td>2</td>
-                    <td>21.04.12</td>
-                    <td>$15</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Lagman</td>
-                    <td>2</td>
-                    <td>21.04.12</td>
-                    <td>$15</td>
-                </tr>
-                </tbody>
-            </table>
+            <p class="timetable"><span class="title">Working Days:</span><span class="info"> 7 days a week</span></p>
+            <p class="timetable"><span class="title">Working Hours:</span><span class="info"> 8:00 am - 10:00 pm</span></p>
+            <p class="timetable"><span class="title">Morning Menu:</span>
+                <span class="info">Chocolate Oatmeal with Egg Whites, Pumpkin French Toast ..<br>
+                    <a href="#">Read more</a></span>
+            </p>
+            <p class="timetable"><span class="title">Lunch Menu:</span>
+                <span class="info">Grilled Turkey Tip Skewers, Grilled Shrimp Salad and Cup of Soup  ..<br>
+                    <a href="#">Read more</a></span>
+            </p>
+            <p class="timetable"><span class="title">Evening Menu:</span>
+                <span class="info">Seared Yellowfin Tuna, House Cured Apple Salmon  ..<br>
+                    <a href="#">Read more</a></span>
+            </p>
         </div>
     </div>
     </div>
