@@ -93,7 +93,57 @@
         </div>
     </div>
     <hr class="divider">
-   
+    <div class="container">
+        <div class="row justify-content-center pt-5 pb-3">
+            <div class="col-lg-12 sec-header">
+                <h1>Restaurant Schedule</h1>
+            </div>
+            <div class="col-lg-12 sec-sub-header">
+                <p>USG Restaurant - where taste meets the myth!</p>
+            </div>
+        </div>
+    <div class="row pb-5">
+        <div class="col-lg-6">
+            <img src="images/restaurant.jpg" alt="..." class="res_img">
+        </div>
+        <div class="col-lg-6">
+            <table class="table table-striped myTable">
+                <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Food name</th>
+                    <th>Number</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lagman</td>
+                    <td>2</td>
+                    <td>21.04.12</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lagman</td>
+                    <td>2</td>
+                    <td>21.04.12</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lagman</td>
+                    <td>2</td>
+                    <td>21.04.12</td>
+                    <td>$15</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
 
 
 </div>
