@@ -1,6 +1,9 @@
 body{
    font-family: 'Open Sans', sans-serif;
 }
+.bg-row{
+    display: flex;
+}
 .navrow{
   margin-right: 0px;
   margin-left: 0px;
@@ -21,19 +24,19 @@ body{
   margin-top: -10%;
   position: relative;
   background-color: #fbfbfb;
-  height: 696px;
+  height: 738px;
   width: 43%;
   display: block;
   z-index: 1;
 }
 .whiteFrame{
-  height: 60%;
+  height: 360px;
   border: 10px solid white;
   border-radius: 75px;
   display: block;
   width: 58%;
   position: absolute;
-  top: 50%;
+  top: 360px;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -60,7 +63,7 @@ body{
   margin-top: -10%;
   position: relative;
   background-color: #bd2130;
-  height: 696px;
+  height: 738px;
   width: 57%;
   display: block;
   z-index: 1;
@@ -127,7 +130,7 @@ body{
 .carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 40%;
+    bottom: 30%;
     left: 0;
     z-index: 15;
     display: -webkit-box;
@@ -195,9 +198,7 @@ body{
 
 .header{
   position: absolute;
-  top: 20%;
-  height: 82%;
-
+  top: 30%;
 }
 
 .header h1{
