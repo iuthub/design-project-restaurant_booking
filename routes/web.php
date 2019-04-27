@@ -12,7 +12,7 @@
 */
 
 Route::get('/', [
-    'as'   => 'index',
+    'as'   => 'order.index',
     'uses' => 'DashboardController@index',
 ]);
 
@@ -22,7 +22,7 @@ Route::group([
     'as'         => 'order.',
     ], function () {
     Route::get('/', [
-        'as'   => 'index',
+        'as'   => 'order.index',
         'uses' => 'OrderController@index',
     ]);
     Route::get('/create', [
