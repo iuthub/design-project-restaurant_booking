@@ -1,7 +1,11 @@
 @extends('layouts.master')
 @section('content')
     <div class="container pt-5">
-
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Add food</a>
@@ -54,24 +58,16 @@
                         <div class="col-lg-12">
                             <form>
                                 <div class="form-group">
-                                    <label for="input">Working Days</label>
-                                    <input type="text" class="form-control" id="input" placeholder="Monday...">
+                                    <label for="input">Goods</label>
+                                    <select class="form-control" name="food_id">
+                                        @foreach($foods as $food)
+                                            <option value="{{ $food['id'] }}">{{ $food['name'] }} / {{ $food['price'] }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="input">Working Hours</label>
-                                    <input type="text" class="form-control" id="input" placeholder="8 am...">
-                                </div>
-                                <div class="form-group">
-                                    <label for="input2">Morning Menu</label>
-                                    <textarea type="text" class="form-control" id="input2" placeholder="It is served in..."></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input2">Lunch Menu</label>
-                                    <textarea type="text" class="form-control" id="input2" placeholder="It is served in..."></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="input2">Evening Menu</label>
-                                    <textarea type="text" class="form-control" id="input2" placeholder="It is served in..."></textarea>
+                                    <label for="input2">Amount</label>
+                                    <input name="amount" type="text" class="form-control" id="input2" placeholder="20"/>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>

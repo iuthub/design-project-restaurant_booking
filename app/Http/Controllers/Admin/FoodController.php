@@ -39,7 +39,7 @@ class FoodController extends Controller
      */
     public function create()
     {
-        //
+        return redirect()->route('admin');
     }
 
     /**
@@ -53,6 +53,7 @@ class FoodController extends Controller
     {
         $this->validate($request, [
             'image' => 'required',
+            'price' => 'required|numeric|between:0,99.99',
             'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -64,9 +65,9 @@ class FoodController extends Controller
 
         Arr::set($data, 'image', '/images/' . $imageName);
         if($this->food->create($data)){
-            echo "Success";
+            return redirect('admin')->with('status', 'Food saved!');
         }else{
-            echo "Error";
+            return redirect('admin')->with('status', 'Food not saved!');
         }
         /*
          * Keyin qo'samiz
