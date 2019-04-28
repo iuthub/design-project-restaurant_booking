@@ -18,6 +18,7 @@ class CreateClientTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('social_id');
+            $table->timestamps();
         });
     }
 

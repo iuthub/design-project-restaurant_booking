@@ -16,9 +16,11 @@ class CreateFoodTable extends Migration
         Schema::create('foods', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->string('image')->nullable();
             $table->integer('status')->nullable();
             $table->float('price');
             $table->unsignedBigInteger('unit_type_id');
+            $table->timestamps();
             $table->foreign('unit_type_id')->references('id')->on('units')->onDelete('cascade');
         });
     }
