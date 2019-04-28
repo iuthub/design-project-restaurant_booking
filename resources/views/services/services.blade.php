@@ -1,6 +1,6 @@
 <!--services-->
 @extends('layouts.master')
-<div class="services">
+<div class="services" id="services">
     <div class="container">
         <div class="row justify-content-center pt-5 pb-3">
             <div class="col-lg-12 sec-header">

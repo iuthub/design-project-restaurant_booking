@@ -1,5 +1,5 @@
 @extends('layouts.master')
-<div class="menu">
+<div class="menu" id="menu">
     <div class="container pb-5">
         <div class="row justify-content-center pt-5 pb-3">
             <div class="col-lg-12 sec-header">

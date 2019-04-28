@@ -15,22 +15,17 @@
                 <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item red-item ">
-                            <a class="nav-link redtxt" href="{{ route('services.services') }}">Services</a>
+                            <a class="nav-link redtxt" href="#services">Services</a>
                         </li>
                         <li class="nav-item red-item">
-                            <a class="nav-link  redtxt" href="#company-section">Menu</a>
+                            <a class="nav-link  redtxt" href="#menu">Menu</a>
                         </li>
                         <li class="nav-item red-item">
-                            <a class="nav-link  redtxt" href="#company-section">Contact Us</a>
+                            <a class="nav-link  redtxt" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item red-item">
-                            <a class="nav-link  redtxt" href="#company-section">
+                            <a class="nav-link  redtxt" href="tel:97 777 77 77">
                                 <i class="fa fa-phone"></i></a>
-                        </li>
-                        <li class="nav-item red-item">
-                            <a class="nav-link  redtxt" href="#company-section">
-
-                            </a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
