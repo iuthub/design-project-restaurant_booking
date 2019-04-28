@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="unit-tab" data-toggle="tab" href="#unit" role="tab" aria-controls="contact" aria-selected="false">Unit</a>
+                </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -81,6 +84,20 @@
                                     <textarea type="text" class="form-control" id="input2" placeholder="Tashkent.."></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="unit" role="tabpanel" aria-labelledby="unit-tab">
+                    <div class="row pt-5">
+                        <div class="col-lg-12">
+                            <form action="/admin/unit/create" method="post">
+                                <div class="form-group">
+                                    <label for="input">Name</label>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input name="name" value="" type="text" class="form-control" id="input" placeholder="kg...">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save</button>
                             </form>
                         </div>
                     </div>

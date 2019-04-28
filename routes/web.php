@@ -39,3 +39,19 @@ Route::group([
         'uses' => 'OrderController@store',
     ]);
 });
+// Admin
+Route::group([
+    'prefix'     => 'admin',
+    'as'         => 'admin.',
+    ], function () {
+ // unit
+    Route::group([
+        'prefix'     => 'unit',
+        'as'         => 'unit.',
+    ], function () {
+        Route::post('/create', [
+            'as'   => 'delete',
+            'uses' => 'Admin\UnitController@store',
+        ]);
+    });
+});

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Models\Unit;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UnitController extends Controller
 {
@@ -23,7 +25,7 @@ class UnitController extends Controller
      */
     public function create()
     {
-        //
+        var_dump(234234);
     }
 
     /**
@@ -34,7 +36,14 @@ class UnitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new Unit();
+        $data = $request->all();
+        $model->name = $data['name'];
+        if($model->save()) {
+            echo "Successfully saved";
+        } else {
+            echo "Error";
+        }
     }
 
     /**
