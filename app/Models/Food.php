@@ -15,6 +15,8 @@ use Illuminate\Support\Collection;
  */
 class Food extends Model
 {
+    const STATUS_ACTIVE = 1;
+
     use TableName;
 
     /**
@@ -23,7 +25,7 @@ class Food extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'price', 'image', 'unit_type_id',
+        'name', 'price', 'image', 'description', 'status', 'unit_type_id',
     ];
 
     /**
@@ -34,4 +36,13 @@ class Food extends Model
     {
         return $this->belongsTo(Unit::class, "unit_type_id", 'id');
     }
+
+    /*public function create($data)
+    {
+        $this->name = $data['name'];
+        $this->status = self::STATUS_ACTIVE;
+        $this->price = $data['price'];
+
+
+    }*/
 }

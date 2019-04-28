@@ -20,22 +20,29 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="row pt-5">
                     <div class="col-lg-12">
-                    <form>
+                    <form method="post" action="/admin/food/create" enctype="multipart/form-data">
+                        {{csrf_field()}}
                         <div class="form-group">
                             <label for="input">Food name</label>
-                            <input type="text" class="form-control" id="input" placeholder="Lagman">
+                            <input name="name" type="text" class="form-control" id="input" placeholder="Lagman">
                         </div>
                         <div class="form-group">
                             <label for="input2">Description</label>
-                            <textarea type="text" class="form-control" id="input2" placeholder="It is served in..."></textarea>
+                            <textarea name="description" type="text" class="form-control" id="input2" placeholder="It is served in..."></textarea>
                         </div>
                         <div class="form-group">
                             <label for="input">Price $</label>
-                            <input type="number" class="form-control" id="input" placeholder="15">
+                            <input name="price" type="number" class="form-control" id="input" placeholder="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="input">Unit type</label>
+                            <select name="unit_type_id" class="form-control">
+                                <option value="1">Test unit</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="file">Image</label>
-                            <input type="file" class="form-control-file" id="file">
+                            <input name="image" type="file" class="form-control-file" id="file">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

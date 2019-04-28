@@ -2,12 +2,26 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Exception;
 use App\Models\Food;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 
 class FoodController extends Controller
 {
+    protected $food;
+    /**
+     * FoodController constructor.
+     */
+    public function __construct(
+        Food $food
+    )
+    {
+        $this->food = $food;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -33,12 +47,35 @@ class FoodController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     * throw Exception
      */
     public function store(Request $request)
     {
-        $model = new Food();
-        $model->user = 1;
-        $model->price = 1;
+        $this->validate($request, [
+            'image' => 'required',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+
+        $data = $request->all();
+        $imageName = time().random_int(1000, 99999). '.' . $request->file('image')->getClientOriginalExtension();
+        $request->file('image')->move(
+            public_path().'/images/', $imageName
+        );
+
+        Arr::set($data, 'image', '/images/' . $imageName);
+        if($this->food->create($data)){
+            echo "Success";
+        }else{
+            echo "Error";
+        }
+        /*
+         * Keyin qo'samiz
+         * DB::beginTransaction();
+        try {
+            $this->food->create($request->all());
+        } catch (Exception $e) {
+            throw new Exception('Article was not saved to the database.');
+        }*/
     }
 
     /**

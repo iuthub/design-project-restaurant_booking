@@ -50,8 +50,18 @@ Route::group([
         'as'         => 'unit.',
     ], function () {
         Route::post('/create', [
-            'as'   => 'delete',
+            'as'   => 'create',
             'uses' => 'Admin\UnitController@store',
+        ]);
+    });
+ // food
+    Route::group([
+        'prefix'     => 'food',
+        'as'         => 'food.',
+    ], function () {
+        Route::post('/create', [
+            'as'   => 'create',
+            'uses' => 'Admin\FoodController@store',
         ]);
     });
 });
