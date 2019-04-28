@@ -150,7 +150,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="orderFood.html" target="_blank" class="btn btn-success">Save</a>
+                <a href="/order" target="_blank" class="btn btn-success">Save</a>
             </div>
         </div>
     </div>

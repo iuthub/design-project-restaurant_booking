@@ -15,9 +15,9 @@ Route::get('/', [
     'as'   => 'order.index',
     'uses' => 'DashboardController@index',
 ]);
-Route::get('/services', [
-    'as'   => 'services.services',
-    'uses' => 'DashboardController@services',
+Route::get('/order', [
+    'as'   => 'order.index',
+    'uses' => 'DashboardController@order',
 ]);
 Route::get('/admin', [
     'as'   => 'admin.index',

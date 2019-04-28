@@ -29,9 +29,9 @@ class DashboardController extends Controller
             'foods' => $this->food->all()->toArray()
         ]);
     }
-    public function services()
+    public function order()
     {
-        return view('services/services');
+        return view('order/index');
     }
     public function admin()
     {
