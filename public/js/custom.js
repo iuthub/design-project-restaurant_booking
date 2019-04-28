@@ -18,3 +18,29 @@ $(window).scroll(function() {
     else
      $('#r1').removeClass('navbar-bg');
 });
+$('#myCarousel2').carousel({
+    interval: 4000
+});
+$(function() {
+    $("#gallery-slider").owlCarousel({
+        // items: 4,
+        merge: true,
+        loop: true,
+        nav:true,
+        margin: 10,
+        video: true,
+        lazyLoad: true,
+        center: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 4
+            },
+            1000: {
+                items: 8
+            }
+        }
+    });
+});

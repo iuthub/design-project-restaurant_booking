@@ -6,7 +6,7 @@
             </div>
             <div class="col-lg-4">
                 <nav class="nav flex-column">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                     <a class="nav-link" href="#">Services</a>
                     <a class="nav-link" href="#">Menu</a>
                 </nav>

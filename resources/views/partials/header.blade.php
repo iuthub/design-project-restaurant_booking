@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row nvr">
             <div class="col-xl-6">
-                <a class="navbar-brand float-left" href="#"><img src="images/logo3.png" alt="..."></a>
+                <a class="navbar-brand float-left" href="/"><img src="images/logo3.png" alt="..."></a>
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +14,6 @@
             <div class="col-xl-6">
                 <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active red-item">
-                            <a class="nav-link redtxt" href="/">Home <span class="sr-only">(current)</span></a>
-                        </li>
                         <li class="nav-item red-item ">
                             <a class="nav-link redtxt" href="{{ route('services.services') }}">Services</a>
                         </li>

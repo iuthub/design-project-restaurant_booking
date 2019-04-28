@@ -1,3 +1,4 @@
+@extends('layouts.master')
 <div class="menu">
     <div class="container pb-5">
         <div class="row justify-content-center pt-5 pb-3">
@@ -8,53 +9,74 @@
                 <p>Where taste meets the myth!</p>
             </div>
         </div>
-        <div class="row pb-4">
-            <div class="col-lg-4">
-                <div class="card">
-                    <img src="images/img4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6 txt-center">
-                                <h5 class="card-title">Lagman soup</h5>
-                            </div>
-                            <div class="col-lg-6">
-                                <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <img src="images/img3.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6 txt-center">
-                                <h5 class="card-title">Lagman soup</h5>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="#" class="btn btn-success">View details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <img src="images/img4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-lg-6 txt-center">
-                                <h5 class="card-title">Lagman soup</h5>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="#" class="btn btn-success">View details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+        <div class="row">
+            <div class="section gallery-section">
+                <div class="owl-carousel gallery-slider" id="gallery-slider">
+                    <div class="gallery-item">
+                        <div class="card">
+                            <img src="images/img4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6 txt-center">
+                                        <h5 class="card-title">Lagman soup</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card">
+                            <img src="images/img3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6 txt-center">
+                                        <h5 class="card-title">Lagman soup</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card">
+                            <img src="images/img4.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6 txt-center">
+                                        <h5 class="card-title">Lagman soup</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="card">
+                            <img src="images/img3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-6 txt-center">
+                                        <h5 class="card-title">Lagman soup</h5>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Gallery End -->
         </div>
     </div>
 </div>
