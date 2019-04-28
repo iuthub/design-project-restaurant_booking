@@ -69,7 +69,7 @@ jQuery(document).ready(function(jQuery) {
 $(function() {
     $("#gallery-slider").owlCarousel({
         // items: 4,
-        merge: true,
+        // merge: true,
         loop: true,
         nav:true,
         margin: 10,
@@ -84,7 +84,7 @@ $(function() {
                 items: 4
             },
             1000: {
-                items: 8
+                items: 6
             }
         }
     });

@@ -3,19 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Food;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
     protected $food;
+    protected $menu;
 
     /**
      * DashboardController constructor.
      * @param Food $food
+     * @param Menu $menu
      */
-    public function __construct(Food $food)
+    public function __construct(Food $food, Menu $menu)
     {
         $this->food = $food;
+        $this->menu = $menu;
     }
 
     /**
@@ -26,7 +30,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('welcome', [
-            'foods' => $this->food->all()->toArray()
+            'menu' => $this->menu->all()
         ]);
     }
     public function order()

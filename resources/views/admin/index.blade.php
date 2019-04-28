@@ -56,7 +56,8 @@
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div class="row pt-5">
                         <div class="col-lg-12">
-                            <form>
+                            <form action="/admin/menu/create" method="post">
+                                {{csrf_field()}}
                                 <div class="form-group">
                                     <label for="input">Goods</label>
                                     <select class="form-control" name="food_id">

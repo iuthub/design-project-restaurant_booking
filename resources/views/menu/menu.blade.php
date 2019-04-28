@@ -13,6 +13,7 @@
         <div class="row">
             <div class="section gallery-section">
                 <div class="owl-carousel gallery-slider" id="gallery-slider">
+
                     <div class="gallery-item">
                         <div class="card">
                             <img src="images/img4.png" class="card-img-top" alt="...">

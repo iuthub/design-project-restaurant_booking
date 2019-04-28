@@ -24,6 +24,7 @@ Route::get('/admin', [
     'uses' => 'DashboardController@admin',
 ]);
 
+Route::get('ajaxRequest', 'FoodController@ajaxRequest');
 
 // Orders
 Route::group([
@@ -62,6 +63,16 @@ Route::group([
         Route::post('/create', [
             'as'   => 'create',
             'uses' => 'Admin\FoodController@store',
+        ]);
+    });
+ // menu
+    Route::group([
+        'prefix'     => 'menu',
+        'as'         => 'menu.',
+    ], function () {
+        Route::post('/create', [
+            'as'   => 'create',
+            'uses' => 'Admin\MenuController@store',
         ]);
     });
 });

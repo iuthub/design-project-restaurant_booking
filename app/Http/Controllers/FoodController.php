@@ -52,36 +52,23 @@ class FoodController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Create a new controller instance.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function edit($id)
+    public function ajaxRequest()
     {
-        //
+        return view('ajaxRequest');
     }
 
     /**
-     * Update the specified resource in storage.
+     * Create a new controller instance.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return void
      */
-    public function update(Request $request, $id)
+    public function ajaxRequestPost(Request $request)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $input = $request->all();
+        return response()->json(['success'=>'Got Simple Ajax Request.']);
     }
 }
