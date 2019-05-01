@@ -1,18 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
     <div class="container">
         <div class="row nvr">
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-md-12">
                 <a class="navbar-brand float-left" href="/"><img src="images/logo3.png" alt="..."></a>
-                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon">
-                      <i class="fa fa-bars" aria-hidden="true"></i>
-                  </span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" id='collapse-toggler' >
+                    <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="col-xl-6">
-                <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
+            <div class="col-xl-6 col-md-6">
+                <div class="hide-nav" id="target-nav">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item red-item ">
                             <a class="nav-link redtxt" href="#services">Services</a>
