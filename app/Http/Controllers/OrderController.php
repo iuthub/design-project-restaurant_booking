@@ -26,9 +26,10 @@ class OrderController extends Controller
      */
     public function index()
     {
+        $order = $this->order->newModelQuery()->join('foods', 'foods.id', 'orders.food_id');
         return view('order.index', [
-            'orders' => $this->order->newModelQuery()->where('session_id', Session::getId())->get(),
-            'totalPrice' => $this->order->newModelQuery()->join('foods', 'foods.id', 'orders.food_id')->where('session_id', Session::getId())->sum('foods.price')
+            'orders' => $order->where('session_id', Session::getId())->get(),
+            'totalPrice' => $order->sum('foods.price')
         ]);
     }
 

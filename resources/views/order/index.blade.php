@@ -24,13 +24,17 @@
                     <td>{{ $order->id }}</td>
                     <td>{{ $order->food->name }}</td>
                     <td>2</td>
-                    <td>21.04.12</td>
+                    <td>{{ $order->created_at }}</td>
                     <td>{{ $order->food->price }}</td>
                 </tr>
                 @endforeach
                 </tbody>
             </table>
             <p class="lead float-right">Total price: {{ $totalPrice }}$</p>
+            <br>
+            <br>
+            <br>
+            <a href="#" class="btn btn-success">Payment</a>
         </div>
     </div>
 @endsection
