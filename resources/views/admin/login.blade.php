@@ -6,19 +6,20 @@
                 <h3>Sign In</h3>
             </div>
             <div class="card-body">
-                <form>
+                <form method="post" action="/login">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="username">
+                        {{csrf_field()}}
+                        <input type="text" name="email" class="form-control" placeholder="email">
 
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="password">
+                        <input type="password" name="password" class="form-control" placeholder="password">
                     </div>
                     <div class="row align-items-center remember">
                         <input type="checkbox">Remember Me

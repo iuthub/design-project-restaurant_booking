@@ -19,15 +19,13 @@ Route::get('/order', [
     'as'   => 'order.index',
     'uses' => 'DashboardController@order',
 ]);
-Route::get('/admin', [
-    'as'   => 'admin.index',
-    'uses' => 'DashboardController@admin',
-]);
 
 Route::get('food', 'FoodController@ajaxRequest');
-Route::get('login', 'DashboardController@login');
 
-// Orders
+Route::match(['get', 'post'], '/login', 'DashboardController@login')->name('login');;
+Route::match(['get', 'post'], '/logout', 'DashboardController@logout');
+
+// orders
 Route::group([
     'prefix'     => 'order',
     'as'         => 'order.',
@@ -56,10 +54,12 @@ Route::group([
     ]);
 });
 // Admin
-Route::group([
-    'prefix'     => 'admin',
-    'as'         => 'admin.',
-    ], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], function () {
+
+    Route::get('/', [
+        'as'   => 'admin.index',
+        'uses' => 'DashboardController@admin',
+    ]);
  // unit
     Route::group([
         'prefix'     => 'unit',

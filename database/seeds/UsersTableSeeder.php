@@ -17,6 +17,7 @@ class UsersTableSeeder extends Seeder
             $user = User::create([
                 'name'      => $faker->lastName,
                 'email'     => $seededAdminEmail,
+                'admin'     => 1,
                 'password'  => \Illuminate\Support\Facades\Hash::make('password'),
                 'created_at' => time(),
                 'updated_at' => time(),
