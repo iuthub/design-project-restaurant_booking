@@ -1,4 +1,3 @@
-@extends('layouts.master')
 <div class="menu" id="menu">
     <div class="container pb-5">
         <div class="row justify-content-center pt-5 pb-3">
@@ -9,77 +8,33 @@
                 <p>Where taste meets the myth!</p>
             </div>
         </div>
-
         <div class="row">
             <div class="section gallery-section">
                 <div class="owl-carousel gallery-slider" id="gallery-slider">
-
-                    <div class="gallery-item">
-                        <div class="card">
-                            <img src="images/img4.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-6 txt-center">
-                                        <h5 class="card-title">Lagman soup</h5>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="card">
-                            <img src="images/img3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-6 txt-center">
-                                        <h5 class="card-title">Lagman soup</h5>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
+                    @foreach($menu as $item)
+                        <div class="gallery-item">
+                            <div class="card">
+                                <img src="{{ $item->food->image }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 txt-center">
+                                            <h5 class="card-title">{{ $item->food->name }}</h5>
+                                            <span class="small">{{ $item->amount }} {{ $item->food->unit->name}}</span>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <input type="submit" id="{{ $item->id }}" value="Detail" name="submit" class="btn btn-dark btn-order">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="card">
-                            <img src="images/img4.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-6 txt-center">
-                                        <h5 class="card-title">Lagman soup</h5>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="card">
-                            <img src="images/img3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-6 txt-center">
-                                        <h5 class="card-title">Lagman soup</h5>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <button data-toggle="modal" data-target="#details" class="btn btn-success">View details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
-            <!-- Gallery End -->
         </div>
+        <!-- Gallery End -->
     </div>
+</div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="details" tabindex="-1" role="dialog" aria-labelledby="detailsTitle" aria-hidden="true">
@@ -94,13 +49,14 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <img src="images/img4.png" class="modal_img" alt="...">
+                        <div class="col-lg-12" >
+                            <img id="imageModal" src="" class="modal_img" alt="...">
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ad architecto consequuntur dicta distinctio dolorem eius facere ipsa ipsam maxime nam natus non quas quia quidem reiciendis velit veniam vitae. </p>
+                        <p id="descriptionModal"></p>
+                        <br>
                     </div>
                 </div>
-                <form action="">
+                <form id="checkout-form" action="/admin/cart/create" method="get">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
@@ -142,17 +98,46 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-                </form>
 
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="/order" target="_blank" class="btn btn-success">Save</a>
+                <a href="#" class="btn btn-checkout btn-success">Order</a>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btn-order').click(function () {
+            $('#details').modal('show');
+            var id = this.id;
+            $.ajax({
+                type:'get',
+                url:'/food',
+                data:{id:id},
+                success:function(data){
+                    $('#imageModal').attr('src', data.image);
+                    $('#descriptionModal').prepend(data.description);
+
+                }
+            });
+        });
+        $('.btn-checkout').click(function () {
+            $('#details').modal('show');
+            var form = $( "#checkout-form" ).serialize();
+            $.ajax({
+                type:'get',
+                url:'/order/create',
+                data:{form:form},
+                success:function(data){
+
+                }
+            });
+        });
+    });
+</script>

@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
+    protected $food;
+
+    public function __construct(Food $food)
+    {
+        $this->food = $food;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -56,19 +63,8 @@ class FoodController extends Controller
      *
      * @return void
      */
-    public function ajaxRequest()
+    public function ajaxRequest(Request $request)
     {
-        return view('ajaxRequest');
-    }
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function ajaxRequestPost(Request $request)
-    {
-        $input = $request->all();
-        return response()->json(['success'=>'Got Simple Ajax Request.']);
+        return response()->json($this->food->find($request['id']));
     }
 }

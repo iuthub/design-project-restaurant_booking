@@ -24,7 +24,7 @@ Route::get('/admin', [
     'uses' => 'DashboardController@admin',
 ]);
 
-Route::get('ajaxRequest', 'FoodController@ajaxRequest');
+Route::get('food', 'FoodController@ajaxRequest');
 
 // Orders
 Route::group([
