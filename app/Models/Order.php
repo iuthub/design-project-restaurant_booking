@@ -24,7 +24,7 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'client_id', 'status', 'food_id',
+        'client_id', 'status', 'food_id', 'session_id',
     ];
 
     /**
@@ -35,12 +35,20 @@ class Order extends Model
     public $timestamps = true;
 
     /**
-     * User relation.
+     * Client relation.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function client()
     {
         return $this->belongsTo(Client::class, "client_id", 'id');
+    }
+    /**
+     * Food relation.
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function food()
+    {
+        return $this->belongsTo(Food::class, "food_id", 'id');
     }
 
     /**

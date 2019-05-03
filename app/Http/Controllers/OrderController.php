@@ -26,7 +26,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('order.index');
+        return view('order.index', [
+            'orders' => $this->order->newModelQuery()->where('session_id', Session::getId())->get()
+        ]);
     }
 
     /**
@@ -36,7 +38,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return 6666;
+
     }
 
     /**

@@ -19,27 +19,15 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach($orders as $order)
                 <tr>
-                    <td>1</td>
-                    <td>Lagman</td>
+                    <td>{{ $order->id }}</td>
+                    <td>{{ $order->food->name }}</td>
                     <td>2</td>
                     <td>21.04.12</td>
-                    <td>$15</td>
+                    <td>{{ $order->food->price }}</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Lagman</td>
-                    <td>2</td>
-                    <td>21.04.12</td>
-                    <td>$15</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Lagman</td>
-                    <td>2</td>
-                    <td>21.04.12</td>
-                    <td>$15</td>
-                </tr>
+                @endforeach
                 </tbody>
             </table>
             <p class="lead float-right">Total price: 45$</p>
