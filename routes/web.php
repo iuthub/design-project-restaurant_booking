@@ -40,6 +40,20 @@ Route::group([
         'uses' => 'OrderController@store',
     ]);
 });
+// booking
+Route::group([
+    'prefix'     => 'booking',
+    'as'         => 'booking.',
+    ], function () {
+    Route::get('/', [
+        'as'   => 'booking.index',
+        'uses' => 'BookingController@index',
+    ]);
+    Route::get('/create', [
+        'as'   => 'booking.store',
+        'uses' => 'BookingController@store',
+    ]);
+});
 // Admin
 Route::group([
     'prefix'     => 'admin',

@@ -5,6 +5,10 @@
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
+            @else
+            <div class="alert alert-warning">
+                {{ 'Error' }}
+            </div>
             @endif
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">

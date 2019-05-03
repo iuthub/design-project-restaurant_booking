@@ -34,7 +34,13 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data['status'] = 1;
+        if($this->menu->create($data)) {
+            return redirect('admin')->with('status', 'Menu item saved!');
+        } else {
+            return redirect('admin')->with('status', 'Menu item not saved!');
+        }
     }
 
     /**

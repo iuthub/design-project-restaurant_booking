@@ -14,12 +14,12 @@
                     @foreach($menu as $item)
                         <div class="gallery-item">
                             <div class="card">
-                                <img src="{{ $item->food->image }}" class="card-img-top" alt="...">
+                                <img src="{{ $item->image }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-lg-6 txt-center">
-                                            <h5 class="card-title">{{ $item->food->name }}</h5>
-                                            <span class="small">{{ $item->amount }} {{ $item->food->unit->name}}</span>
+                                            <h5 class="card-title">{{ $item->name }}</h5>
+                                            <span class="small">{{ $item->amount }} {{ $item->unit->name}}</span>
                                         </div>
                                         <div class="col-lg-6">
                                             <input type="submit" id="{{ $item->id }}" value="Detail" name="submit" class="btn btn-dark btn-order">
@@ -71,7 +71,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                            <input type="radio" id="customRadioInline1" class="custom-control-input">
                                             <label class="custom-control-label" for="customRadioInline1">Book a table</label>
                                         </div>
                                     </div>
@@ -88,6 +88,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="date">Date</label>
+                                            <input id="modalFood" type="hidden" name="food_id" value="">
                                             <input type="date" class="form-control" id="date" placeholder="">
                                         </div>
                                     </div>
@@ -123,19 +124,25 @@
                 success:function(data){
                     $('#imageModal').attr('src', data.image);
                     $('#descriptionModal').prepend(data.description);
+                    $('#modalFood').attr('value', data.id);
 
                 }
             });
         });
         $('.btn-checkout').click(function () {
             $('#details').modal('show');
-            var form = $( "#checkout-form" ).serialize();
+            var modalFood = $( "#modalFood" ).val();
             $.ajax({
                 type:'get',
                 url:'/order/create',
-                data:{form:form},
+                data:{food_id:modalFood},
                 success:function(data){
-
+                    if(data['status'] == 1){
+                        window.location.replace("/order");
+                    }
+                    else{
+                        alert('Error response')
+                    }
                 }
             });
         });

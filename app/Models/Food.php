@@ -37,6 +37,17 @@ class Food extends Model
         return $this->belongsTo(Unit::class, "unit_type_id", 'id');
     }
 
+
+
+    /**
+     * User relation.
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function menu()
+    {
+        return $this->belongsTo(Menu::class, "food_id", 'id');
+    }
+
     /*public function create($data)
     {
         $this->name = $data['name'];

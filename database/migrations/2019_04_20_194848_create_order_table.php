@@ -18,8 +18,8 @@ class CreateOrderTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('status');
             $table->unsignedBigInteger('food_id');
-            $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->unsignedBigInteger('client_id')->default(null);
+            $table->string('session_id')->default(null);
             $table->foreign('food_id')->references('id')->on('foods')->onDelete('cascade');
             $table->timestamps();
         });

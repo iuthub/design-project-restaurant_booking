@@ -30,7 +30,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('welcome', [
-            'menu' => $this->menu->all()
+            'menu' => $this->food->with('menu')->get()
         ]);
     }
     public function order()
