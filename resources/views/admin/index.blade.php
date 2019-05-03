@@ -1,14 +1,20 @@
+@php
+    $units = app(App\Models\Unit::class)->all()
+@endphp
 @extends('layouts.master')
 @section('content')
+
     <div class="container pt-5">
+
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
-            @else
-            <div class="alert alert-warning">
-                {{ 'Error' }}
-            </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-warning">
+                    Error
+                </div>
             @endif
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
@@ -45,7 +51,9 @@
                         <div class="form-group">
                             <label for="input">Unit type</label>
                             <select name="unit_type_id" class="form-control">
-                                <option value="1">Test unit</option>
+                                @foreach($units as $unit)
+                                <option value="{{ $unit->id }}}">{{ $unit->name }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
