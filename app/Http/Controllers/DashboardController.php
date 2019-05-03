@@ -43,4 +43,8 @@ class DashboardController extends Controller
             'foods' => $this->food->all()->toArray()
         ]);
     }
+    public function login()
+    {
+        return view('admin/login');
+    }
 }

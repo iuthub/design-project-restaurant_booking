@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ $order->id }}</td>
                     <td>{{ $order->food->name }}</td>
-                    <td>2</td>
+                    <td>1</td>
                     <td>{{ $order->created_at }}</td>
                     <td>{{ $order->food->price }}</td>
                 </tr>
