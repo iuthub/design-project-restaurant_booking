@@ -260,3 +260,8 @@ Resolves: PROJ123
 See also: PROJ12A, PROJ213
 ```
 
+Credentials admin
+<br>
+Login: `admin@admin.com`
+<br>
+Password: `password`
