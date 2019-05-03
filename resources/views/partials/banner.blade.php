@@ -25,8 +25,8 @@
                                 <h4>For any taste</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <img class="img float-right" src="images/img2.png">
+                        <div class="col-lg-6 carousel-img-container">
+                            <img class="img float-right img-fluid" src="images/img2.png">
                         </div>
                     </div>
                 </div>
@@ -40,8 +40,8 @@
                                 <h4>For any taste</h4>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <img class="img float-right" src="images/img3.png">
+                        <div class="col-lg-6 carousel-img-container">
+                            <img class="img float-right img-fluid" src="images/img3.png">
                         </div>
                     </div>
                 </div>

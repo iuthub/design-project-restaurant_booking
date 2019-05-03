@@ -73,9 +73,16 @@ body {
 	display: block;
 	visibility: hidden;
 }
+.navbar-brand {
+	padding: 0px;
+	display: flex;
+	flex-grow: 0;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 .navbar-brand img {
 	width: 50%;
-	margin-top: -2%;
 }
 .navbar-bg {
 	position: fixed;
@@ -99,9 +106,6 @@ body {
 	color: #bd2130;
 }
 
-.red-item {
-	margin-top: 4%;
-}
 .redtxt {
 	color: #fbfbfb;
 }
@@ -218,11 +222,19 @@ body {
 
 	width: 100%;
 }
-
+.navbar-nav {
+	flex-direction: row;
+	align-items: center;
+}
+.navbar-nav .nav-link {
+	color: #fff;
+	font-size: 20px;
+}
 .navbar-trans .navbar-nav .nav-link:focus,
 .navbar-trans .navbar-nav .nav-link:hover {
-	color: #fba8b08c;
+	color: #bd2130;
 	margin-bottom: -3px;
+	color: #fff;
 }
 
 .nav-link:focus {
@@ -233,8 +245,8 @@ body {
 	content: '';
 	display: block;
 	width: 0;
-	height: 3px;
-	background: #fba8b08c;
+	height: 2px;
+	background: #fbfbfb;
 	margin-top: 3px;
 	transition: width .3s ease;
 }
@@ -586,10 +598,10 @@ div.services_slogan a {
 }
 
 .nav {
-	height: 50px;
 	width: 100%;
-	background-color: #4d4d4d;
+	background-color: #2222;
 	position: relative;
+	z-index: 10;
 }
 
 .nav > .nav-header {
@@ -597,10 +609,8 @@ div.services_slogan a {
 }
 
 .nav > .nav-header > .nav-title {
-	display: inline-block;
 	font-size: 22px;
 	color: #fff;
-	padding: 10px 10px 10px 10px;
 }
 
 .nav > .nav-btn {
@@ -608,9 +618,11 @@ div.services_slogan a {
 }
 
 .nav > .nav-links {
-	display: inline;
-	float: right;
+	display: flex;
+	flex-direction: row;
+	flex: 1;
 	font-size: 18px;
+	margin-right: 40px;
 }
 
 .nav > .nav-links > a {
@@ -628,17 +640,41 @@ div.services_slogan a {
 	display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+	.main {
+		top: 10%;
+	}
+	.header h1 {
+		font-size: 38px;
+	}
+	.header h4 {
+		font-size: 28px;
+	}
+	.carousel-control-prev {
+		display: none;
+	}
+	.carousel-control-next {
+		display: none;
+	}
+	.carousel-img-container {
+		margin-top: 100px;
+	}
+
+	.red-bg {
+		visibility: hidden;
+	}
+	.white-bg {
+		visibility: hidden;
+	}
 	.nav > .nav-btn {
 		display: inline-block;
 		position: absolute;
-		right: 0px;
-		top: 0px;
+		right: 20px;
+		top: 8px;
 	}
 	.nav > .nav-btn > label {
 		display: inline-block;
-		width: 50px;
-		height: 50px;
+		margin-bottom: 0px;
 		padding: 13px;
 	}
 	.nav > .nav-btn > label:hover,
@@ -647,8 +683,8 @@ div.services_slogan a {
 	}
 	.nav > .nav-btn > label > span {
 		display: block;
-		width: 25px;
-		height: 10px;
+		width: 40px;
+		height: 14px;
 		border-top: 2px solid #eee;
 	}
 	.nav > .nav-links {
@@ -659,7 +695,7 @@ div.services_slogan a {
 		height: 0px;
 		transition: all 0.3s ease-in;
 		overflow-y: hidden;
-		top: 50px;
+		top: 75px;
 		left: 0px;
 	}
 	.nav > .nav-links > a {
@@ -670,7 +706,15 @@ div.services_slogan a {
 		height: 0px;
 	}
 	.nav > #nav-check:checked ~ .nav-links {
-		height: calc(100vh - 50px);
+		height: calc(100vh - 75px);
 		overflow-y: auto;
 	}
+	.navbar-nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.nav-item {
+	margin-right: 15px;
 }

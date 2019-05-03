@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-trans" id="r1">
+<!-- <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
     <div class="container">
         <div class="row nvr">
             <div class="col-xl-6">
@@ -35,16 +35,16 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> -->
 
 <!-- 
     New Navbar should be implemented
  -->
- <!-- <div class="nav">
+ <div class="nav">
   <input type="checkbox" id="nav-check">
   <div class="nav-header">
     <div class="nav-title">
-      JoGeek
+    <a class="navbar-brand " href="/"><img src="images/logo3.png" class="img-fluid" alt="..."></a>
     </div>
   </div>
   <div class="nav-btn">
@@ -56,12 +56,22 @@
   </div>
   
   <div class="nav-links">
-    <a href="//github.io/jo_geek" target="_blank">Github</a>
-    <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
-    <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
-    <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
-    <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
-  </div> -->
+    <ul class="navbar-nav ml-auto">
+         <li class="nav-item red-item ">
+            <a class="nav-link redtxt" href="#services">Services</a>
+        </li>
+        <li class="nav-item red-item">
+           <a class="nav-link  redtxt" href="#menu">Menu</a>
+        </li>
+        <li class="nav-item red-item">
+            <a class="nav-link  redtxt" href="#contact">Contact Us</a>
+        </li>
+        <li class="nav-item red-item">
+            <a class="nav-link  redtxt" href="tel:97 777 77 77">
+            <i class="fa fa-phone"></i></a>
+         </li>
+    </ul>
+  </div>
 </div>
 <!-- Modal HTML -->
 <div id="myModal" class="modal fade">
