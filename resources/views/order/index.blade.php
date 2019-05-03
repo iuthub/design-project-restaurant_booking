@@ -30,7 +30,7 @@
                 @endforeach
                 </tbody>
             </table>
-            <p class="lead float-right">Total price: 45$</p>
+            <p class="lead float-right">Total price: {{ $totalPrice }}$</p>
         </div>
     </div>
 @endsection
