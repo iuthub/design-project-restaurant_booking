@@ -61,10 +61,10 @@ class FoodController extends Controller
         $data = $request->all();
         $imageName = time().random_int(1000, 99999). '.' . $request->file('image')->getClientOriginalExtension();
         $request->file('image')->move(
-            public_path().'/images/', $imageName
+            public_path().'/upload/', $imageName
         );
 
-        Arr::set($data, 'image', '/images/' . $imageName);
+        Arr::set($data, 'image', '/upload/' . $imageName);
         if($this->food->create($data)){
             return redirect('admin')->with('status', 'Food saved!');
         }else{
