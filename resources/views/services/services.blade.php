@@ -34,7 +34,7 @@
                         <div class="number_zag">01</div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
-                        <div class="services_slogan"><a href="orderFood.html">Order Food</a></div>
+                        <div class="services_slogan"><a href="#menu">Order Food</a></div>
                         <p id="services_slogan">You can find food for any taste! Deliciousness jumping into the mouth</p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         <div class="number_zag">02</div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
-                        <div class="services_slogan"><a href="/rastsenki.html">Book table</a></div>
+                        <div class="services_slogan"><a href="#">Book table</a></div>
                         <p id="services_slogan3">Spacious places are waiting for you! The pleasure of variety on your plate</p>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                         <div class="number_zag">03</div>
                     </div>
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-12">
-                        <div class="services_slogan"><a href="/rastsenki.html">Take-away</a></div>
+                        <div class="services_slogan"><a href="#">Take-away</a></div>
                         <p id="services_slogan"> So fast so hot... <br> Faster than you can imagine!</p>
                     </div>
                 </div>

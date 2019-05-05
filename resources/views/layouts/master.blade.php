@@ -18,12 +18,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 </head>
 <body>
-
     @yield('content')
-
-
-
-
 <script src="{{asset('assets/bootstrap/js/bootstrap.js')}}"></script>
 <script src={{asset('assets/js/owl.carousel.js')}}></script>
 <script src="{{asset('js/custom.js')}}"></script>

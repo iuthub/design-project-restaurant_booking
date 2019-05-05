@@ -91,3 +91,4 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
         ]);
     });
 });
+Auth::routes();

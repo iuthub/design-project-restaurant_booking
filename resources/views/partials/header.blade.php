@@ -1,7 +1,7 @@
  <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
     <div class="container">
         <div class="row nvr">
-            <div class="col-xl-6">
+            <div class="col-xl-5">
                 <a class="navbar-brand float-left" href="/"><img src="images/logo.png" alt="..."></a>
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -11,7 +11,7 @@
                   </span>
                 </button>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-7">
                 <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item red-item ">
@@ -27,10 +27,27 @@
                             <a class="nav-link  redtxt" href="tel:97 777 77 77">
                                 <i class="fa fa-phone"></i></a>
                         </li>
+
                     </ul>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
-                        Login
-                    </button>
+                    @if(!Auth::check())
+                        <a href ="{{ url('/login') }}" class="btn btn-danger mr-3" data-toggle="modal" data-target="#myModal">
+                            Login
+                        </a>
+                        <a href ="{{ url('/register') }}" class="btn btn-danger">
+                            Register
+                        </a>
+
+                    @else
+                  <a href="{{ url ('/logout') }}" class="btn btn-danger"
+                               onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit ();" >
+                                Logout
+                            </a>
+                            <form id ="logout-form" action ="{{ url ('/logout') }}" method ="POST" style ="display:none;">
+                                {{ csrf_field() }}
+                            </form>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -82,27 +99,46 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <form method="post" action="/login">
+                <form method="POST" action="{{ route('login') }}">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                             {{csrf_field()}}
-                            <input type="text" class="form-control" name="email" placeholder="Username" required="required">
+{{--                            <input type="text" class="form-control" name="email" placeholder="Username" required="required">--}}
+                            <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                            <input type="text" class="form-control" name="password" placeholder="Password" required="required">
+{{--                            <input type="text" class="form-control" name="password" placeholder="Password" required="required">--}}
+                            <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required autocomplete="current-password">
+
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
                         </div>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
                     </div>
-                    <p class="hint-text"><a href="#">Forgot Password?</a></p>
+                    @if (Route::has('password.request'))
+                        <a class="hint-text" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                    @endif
+
                 </form>
             </div>
-            <div class="modal-footer">Don't have an account? <a href="#">Create one</a></div>
+            <div class="modal-footer">Don't have an account? <a href="{{ route('register') }}"> Register</a></div>
         </div>
     </div>
 </div>

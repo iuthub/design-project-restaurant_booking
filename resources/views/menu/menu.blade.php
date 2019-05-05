@@ -11,7 +11,7 @@
         <div class="row">
                     @foreach($menu as $item)
                         <div class="col-lg-4">
-                            <div class="card">
+                            <div class="card" id="menu_card">
                                 <img src="{{ $item->image }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="row">
