@@ -82,7 +82,7 @@ body {
 	align-items: center;
 }
 .navbar-brand img {
-	width: 50%;
+	width: 28%;
 }
 .navbar-bg {
 	position: fixed;
@@ -726,4 +726,7 @@ div.services_slogan a {
 
 .nav-item {
 	margin-right: 15px;
+}
+.footer-img{
+	width: 100%!important;
 }

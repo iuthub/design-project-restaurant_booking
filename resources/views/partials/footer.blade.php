@@ -2,9 +2,9 @@
     <div class="container pt-3">
         <div class="row">
             <div class="col-lg-4">
-                <a class="navbar-brand float-left" href="#"><img src="images/logo3.png" alt="..."></a>
+                <a class="navbar-brand float-left" href="#"><img class="footer-img" src="images/logo.png" alt="..."></a>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <nav class="nav flex-column" id="r1">
                     <a class="nav-link" href="/">Home</a>
                     <a class="nav-link" href="#services">Services</a>
