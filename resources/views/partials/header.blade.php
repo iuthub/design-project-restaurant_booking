@@ -82,17 +82,12 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
-                <form action="/examples/actions/confirmation.php" method="post">
+                <form  <form method="post" action="/login">
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input type="text" class="form-control" name="username" placeholder="Username" required="required">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                            <input type="text" class="form-control" name="phone" placeholder="Phone number" required="required">
+                            {{csrf_field()}}
+                            <input type="text" class="form-control" name="email" placeholder="Username" required="required">
                         </div>
                     </div>
                     <div class="form-group">
