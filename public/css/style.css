@@ -263,17 +263,21 @@ body {
 	text-align: center;
 	color: #bd2130;
 }
+#app{
+	background-color: #b21f2d;
+}
 .sec-sub-header {
 	text-align: center;
 }
 .card {
 	background-color: transparent;
 	margin-bottom: 30px;
-	max-width: 325px;
 	box-shadow: -3px 2px 6px 3px rgba(6, 6, 6, 0.13);
+}
+#menu_card{
+	max-width: 325px;
 	min-width: 325px;
 }
-
 .txt-center {
 	text-align: center !important;
 }
@@ -730,3 +734,4 @@ div.services_slogan a {
 .footer-img{
 	width: 100%!important;
 }
+
