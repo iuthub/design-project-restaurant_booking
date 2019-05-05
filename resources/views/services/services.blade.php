@@ -105,7 +105,7 @@
         </div>
     <div class="row pb-5">
         <div class="col-lg-6">
-            <img src="images/restaurant.jpg" alt="..." class="res_img mt-3">
+            <img src="images/restaurant.jpg" alt="..." class="res_img mt-3 mb-5">
         </div>
         <div class="col-lg-6">
             <p class="timetable"><span class="title">Working Days:</span><span class="info"> 7 days a week</span></p>

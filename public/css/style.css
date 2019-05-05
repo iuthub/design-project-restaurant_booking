@@ -225,10 +225,11 @@ body {
 .navbar-nav {
 	flex-direction: row;
 	align-items: center;
+	margin-top: 15px;
 }
 .navbar-nav .nav-link {
 	color: #fff;
-	font-size: 20px;
+	font-size: 16px;
 }
 .navbar-trans .navbar-nav .nav-link:focus,
 .navbar-trans .navbar-nav .nav-link:hover {
@@ -646,6 +647,9 @@ div.services_slogan a {
 	.main {
 		top: 10%;
 	}
+	/*.navrow{*/
+	/*	background-color: #b21f2d;*/
+	/*}*/
 	.header h1 {
 		font-size: 38px;
 	}
@@ -714,6 +718,9 @@ div.services_slogan a {
 	.navbar-nav {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+	.navbar{
+		background-color: #bd2130;
 	}
 }
 

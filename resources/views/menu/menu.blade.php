@@ -152,13 +152,13 @@
             });
         });
         $('.btn-checkout').click(function () {
-            $('#details').modal('show');
             var modalFood = $( "#modalFood" ).val();
             $.ajax({
                 type:'get',
                 url:'/order/create',
                 data:{food_id:modalFood},
                 success:function(data){
+                    console.log(data);
                     if(data['status'] == 1){
                         window.location.replace("/order");
                     }
