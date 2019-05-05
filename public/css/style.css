@@ -270,7 +270,9 @@ body {
 	margin-bottom: 30px;
 	max-width: 325px;
 	box-shadow: -3px 2px 6px 3px rgba(6, 6, 6, 0.13);
+	min-width: 325px;
 }
+
 .txt-center {
 	text-align: center !important;
 }

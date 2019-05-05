@@ -55,7 +55,7 @@
                             <label for="input">Unit type</label>
                             <select name="unit_type_id" class="form-control">
                                 @foreach($units as $unit)
-                                <option value="{{ $unit->id }}}">{{ $unit->name }}</option>
+                                <option value="{{ $unit->id }}">{{ $unit->name }}</option>
                                 @endforeach
                             </select>
                         </div>

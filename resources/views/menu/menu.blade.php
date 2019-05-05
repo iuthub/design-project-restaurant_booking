@@ -9,10 +9,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="section gallery-section">
-                <div class="owl-carousel gallery-slider" id="gallery-slider">
                     @foreach($menu as $item)
-                        <div class="gallery-item">
+                        <div class="col-lg-4">
                             <div class="card">
                                 <img src="{{ $item->image }}" class="card-img-top" alt="...">
                                 <div class="card-body">
@@ -32,6 +30,30 @@
                 </div>
             </div>
         </div>
+{{--        <div class="row">--}}
+{{--            <div class="section gallery-section">--}}
+{{--                <div class="owl-carousel gallery-slider" id="gallery-slider">--}}
+{{--                    @foreach($menu as $item)--}}
+{{--                        <div class="gallery-item">--}}
+{{--                            <div class="card">--}}
+{{--                                <img src="{{ $item->image }}" class="card-img-top" alt="...">--}}
+{{--                                <div class="card-body">--}}
+{{--                                    <div class="row">--}}
+{{--                                        <div class="col-lg-6 txt-center">--}}
+{{--                                            <h5 class="card-title">{{ $item->name }}</h5>--}}
+{{--                                            <span class="small">{{ $item->amount }} {{ $item->unit->name}}</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-lg-6">--}}
+{{--                                            <input type="submit" id="{{ $item->id }}" value="Detail" name="submit" class="btn btn-dark btn-order">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
         <!-- Gallery End -->
     </div>
 </div>
