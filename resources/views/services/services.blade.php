@@ -103,7 +103,7 @@
                 <p>USG Restaurant - where taste meets the myth!</p>
             </div>
         </div>
-    <div class="row pb-5">l
+    <div class="row pb-5">
         <div class="col-lg-6">
             <img src="images/restaurant.jpg" alt="..." class="res_img mt-3 mb-5">
         </div>
