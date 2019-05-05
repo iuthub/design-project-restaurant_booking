@@ -1,17 +1,23 @@
- <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
+  <nav class="navbar navbar-expand-lg navbar-trans" id="r1">
     <div class="container">
         <div class="row nvr">
-            <div class="col-xl-5">
-                <a class="navbar-brand float-left" href="/"><img src="images/logo.png" alt="..."></a>
-                <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+            <div class="col-xl-5 col-md-6 col-sm-6">
+                <div class="row">
+                    <div class="col-xl-12 col-md-8 col-sm-8 col-6">
+                        <a class="navbar-brand float-left" href="/"><img src="images/logo.png" alt="..."></a>
+                    </div>
+                    <div class="col-xl-6 col-md-4 col-sm-4 col-6">
+                        <button class="navbar-toggler float-right" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon">
                       <i class="fa fa-bars" aria-hidden="true"></i>
                   </span>
-                </button>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="col-xl-7">
+            <div class="col-xl-7 col-md-6 col-sm-6">
                 <div class="collapse navbar-collapse float-left" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item red-item ">
