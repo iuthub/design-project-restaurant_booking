@@ -51,7 +51,6 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-
         $data['status'] = 1;
         $data['food_id'] = $request['food_id'];
         $data['client_id'] = null;
